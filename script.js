@@ -1,19 +1,20 @@
+// Функция показа/скрытия дополнительного текста на главной странице.
+window.toggleMore = function () {
+    const moreText = document.getElementById("moreText");
+    const showMoreButton = document.getElementById("showMore");
+
+    if (!moreText || !showMoreButton) return;
+
+    const isVisible = moreText.style.display !== "none";
+    moreText.style.display = isVisible ? "none" : "block";
+    showMoreButton.textContent = isVisible ? "Подробнее" : "Скрыть";
+    showMoreButton.setAttribute("aria-expanded", String(!isVisible));
+};
+
 // JavaScript для сайта кофейни SOVA
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Кнопка «Подробнее»: показать или скрыть дополнительный текст
-    const showMoreButton = document.getElementById("showMore");
-    const moreText = document.getElementById("moreText");
-
-    if (showMoreButton && moreText) {
-        showMoreButton.addEventListener("click", () => {
-            moreText.hidden = !moreText.hidden;
-
-            showMoreButton.textContent = moreText.hidden ? "Подробнее" : "Скрыть";
-            showMoreButton.setAttribute("aria-expanded", String(!moreText.hidden));
-        });
-    }
-
+    // 1. Кнопка «Подробнее» — функция вызывается из кнопки в index.html
     // 2. Динамическое создание карточек
     const projectsList = document.getElementById("projectsList");
 

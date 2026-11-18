@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOVA — Главная</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js?v=2" defer></script>
 </head>
 <body>
 
@@ -26,8 +25,8 @@
         <div class="container">
             <h2>Добро пожаловать в кофейню SOVA!</h2>
             <p>Место, где аромат свежего кофе помогает начать день с хорошего настроения.</p>
-            <button type="button" id="showMore" aria-expanded="false">Подробнее</button>
-            <p id="moreText" hidden>В SOVA можно насладиться любимым напитком, отдохнуть и провести время в приятной атмосфере.</p>
+            <button type="button" id="showMore" onclick="toggleMore()">Подробнее</button>
+            <p id="moreText" style="display: none;">В SOVA можно насладиться любимым напитком, отдохнуть и провести время в приятной атмосфере.</p>
 
             <img src="img/coffee.jpg" alt="Чашка кофе">
         </div>
@@ -47,5 +46,6 @@
     </div>
 </footer>
 
+    <script src="script.js?v=3"></script>
 </body>
 </html>
