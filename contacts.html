@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOVA — Контакты</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -29,18 +30,19 @@
 
             <h3>Обратная связь</h3>
 
-            <form>
+            <form id="contactForm" novalidate>
                 <label for="name">Ваше имя:</label>
-                <input type="text" id="name" name="name" placeholder="Введите имя">
+                <input type="text" id="name" name="name" placeholder="Введите имя" required>
 
                 <label for="email">Ваш email:</label>
-                <input type="email" id="email" name="email" placeholder="Введите email">
+                <input type="email" id="email" name="email" placeholder="Введите email" required>
 
                 <label for="message">Сообщение:</label>
-                <input type="text" id="message" name="message" placeholder="Введите сообщение">
+                <textarea id="message" name="message" placeholder="Введите сообщение" rows="4" required></textarea>
 
                 <button type="submit">Отправить</button>
             </form>
+            <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
         </div>
     </section>
 </main>

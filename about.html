@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOVA — О проекте</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -37,6 +40,17 @@
             </p>
 
             <h3>Почему SOVA?</h3>
+            <button class="btn btn-dark mb-3" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#sovaDetails"
+                    aria-expanded="false" aria-controls="sovaDetails">
+                Узнать больше
+            </button>
+            <div class="collapse mb-3" id="sovaDetails">
+                <div class="card card-body">
+                    SOVA — учебный проект уютной кофейни. Здесь можно отдохнуть,
+                    встретиться с друзьями или спокойно поработать за чашкой кофе.
+                </div>
+            </div>
 
             <ul>
                 <li>Уютная и спокойная атмосфера.</li>
