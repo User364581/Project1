@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (showMoreButton && moreText) {
         showMoreButton.addEventListener("click", () => {
-            const isHidden = moreText.classList.toggle("d-none");
+            moreText.hidden = !moreText.hidden;
 
-            showMoreButton.textContent = isHidden ? "Подробнее" : "Скрыть";
-            showMoreButton.setAttribute("aria-expanded", String(!isHidden));
+            showMoreButton.textContent = moreText.hidden ? "Подробнее" : "Скрыть";
+            showMoreButton.setAttribute("aria-expanded", String(!moreText.hidden));
         });
     }
 
